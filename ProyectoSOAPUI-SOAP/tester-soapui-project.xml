@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="0349fb77-5ad1-48aa-ba6d-74a109406602" activeEnvironment="Default" name="tester" resourceRoot="" soapui-version="5.3.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="d9b5114d-beaa-4280-abb3-d06e80f85ce5" wsaVersion="NONE" name="UsuarioSoapBinding" type="wsdl" bindingName="{http://ws.proyecto.anzen.com}UsuarioSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8082/ExpoSOAP/wsdl/Usuario.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8082/ExpoSOAP/wsdl/Usuario.wsdl"><con:part><con:url>http://localhost:8082/ExpoSOAP/wsdl/Usuario.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://ws.proyecto.anzen.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://ws.proyecto.anzen.com" xmlns:intf="http://ws.proyecto.anzen.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+  <wsdl:types>
+    <schema elementFormDefault="qualified" targetNamespace="http://ws.proyecto.anzen.com" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="altaAlumno">
+        <complexType>
+          <sequence>
+            <element name="nombre" type="xsd:string"/>
+            <element name="telefono" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="altaAlumnoResponse">
+        <complexType>
+          <sequence>
+            <element name="altaAlumnoReturn" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="setNombre">
+        <complexType>
+          <sequence>
+            <element name="nombre" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="setNombreResponse">
+        <complexType/>
+      </element>
+      <element name="getTelefono">
+        <complexType/>
+      </element>
+      <element name="getTelefonoResponse">
+        <complexType>
+          <sequence>
+            <element name="getTelefonoReturn" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="getNombre">
+        <complexType/>
+      </element>
+      <element name="getNombreResponse">
+        <complexType>
+          <sequence>
+            <element name="getNombreReturn" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="setTelefono">
+        <complexType>
+          <sequence>
+            <element name="telefono" type="xsd:string"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="setTelefonoResponse">
+        <complexType/>
+      </element>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="getNombreRequest">
+    <wsdl:part element="impl:getNombre" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTelefonoResponse">
+    <wsdl:part element="impl:getTelefonoResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getNombreResponse">
+    <wsdl:part element="impl:getNombreResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setTelefonoResponse">
+    <wsdl:part element="impl:setTelefonoResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setNombreRequest">
+    <wsdl:part element="impl:setNombre" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="altaAlumnoRequest">
+    <wsdl:part element="impl:altaAlumno" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setNombreResponse">
+    <wsdl:part element="impl:setNombreResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTelefonoRequest">
+    <wsdl:part element="impl:getTelefono" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="altaAlumnoResponse">
+    <wsdl:part element="impl:altaAlumnoResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setTelefonoRequest">
+    <wsdl:part element="impl:setTelefono" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Usuario">
+    <wsdl:operation name="altaAlumno">
+      <wsdl:input message="impl:altaAlumnoRequest" name="altaAlumnoRequest"></wsdl:input>
+      <wsdl:output message="impl:altaAlumnoResponse" name="altaAlumnoResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setNombre">
+      <wsdl:input message="impl:setNombreRequest" name="setNombreRequest"></wsdl:input>
+      <wsdl:output message="impl:setNombreResponse" name="setNombreResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTelefono">
+      <wsdl:input message="impl:getTelefonoRequest" name="getTelefonoRequest"></wsdl:input>
+      <wsdl:output message="impl:getTelefonoResponse" name="getTelefonoResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNombre">
+      <wsdl:input message="impl:getNombreRequest" name="getNombreRequest"></wsdl:input>
+      <wsdl:output message="impl:getNombreResponse" name="getNombreResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setTelefono">
+      <wsdl:input message="impl:setTelefonoRequest" name="setTelefonoRequest"></wsdl:input>
+      <wsdl:output message="impl:setTelefonoResponse" name="setTelefonoResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UsuarioSoapBinding" type="impl:Usuario">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="altaAlumno">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="altaAlumnoRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="altaAlumnoResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setNombre">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="setNombreRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setNombreResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTelefono">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getTelefonoRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTelefonoResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNombre">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getNombreRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getNombreResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setTelefono">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="setTelefonoRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setTelefonoResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UsuarioService">
+    <wsdl:port binding="impl:UsuarioSoapBinding" name="Usuario">
+      <wsdlsoap:address location="http://localhost:8082/ExpoSOAP/services/Usuario"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8082/ExpoSOAP/services/Usuario</con:endpoint></con:endpoints><con:operation id="6c8e78bd-77bf-486b-a2ad-7c92bbfc65b9" isOneWay="false" action="" name="altaAlumno" bindingOperationName="altaAlumno" type="Request-Response" outputName="altaAlumnoResponse" inputName="altaAlumnoRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f42147f9-4078-47cb-ae4c-ff85b75fa906" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8082/ExpoSOAP/services/Usuario</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.proyecto.anzen.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:altaAlumno>\r
+         <ws:nombre>Abner</ws:nombre>\r
+         <ws:telefono>123445</ws:telefono>\r
+      </ws:altaAlumno>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws.proyecto.anzen.com/Usuario/altaAlumnoRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="c9672faa-4dc9-4589-822e-95f0dcc173d9" isOneWay="false" action="" name="getNombre" bindingOperationName="getNombre" type="Request-Response" outputName="getNombreResponse" inputName="getNombreRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9223aba0-96a4-4023-b326-55476aaa2f8e" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8082/ExpoSOAP/services/Usuario</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.proyecto.anzen.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:getNombre/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws.proyecto.anzen.com/Usuario/getNombreRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="d854f68c-2c83-4dec-9a95-b4557288e4ef" isOneWay="false" action="" name="getTelefono" bindingOperationName="getTelefono" type="Request-Response" outputName="getTelefonoResponse" inputName="getTelefonoRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="50e1638d-25a7-4aeb-a38a-23ed9021146f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8082/ExpoSOAP/services/Usuario</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.proyecto.anzen.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:getTelefono/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws.proyecto.anzen.com/Usuario/getTelefonoRequest"/></con:call></con:operation><con:operation id="218d3ecf-4bbe-47fe-aba4-e7d4e5c36782" isOneWay="false" action="" name="setNombre" bindingOperationName="setNombre" type="Request-Response" outputName="setNombreResponse" inputName="setNombreRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fe2635f6-2a8f-496b-9640-e739ddb6ae18" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8082/ExpoSOAP/services/Usuario</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.proyecto.anzen.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:setNombre>\r
+         <ws:nombre>abner</ws:nombre>\r
+      </ws:setNombre>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws.proyecto.anzen.com/Usuario/setNombreRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="b7fd56b4-b45f-4fd9-84cd-fb843612d889" isOneWay="false" action="" name="setTelefono" bindingOperationName="setTelefono" type="Request-Response" outputName="setTelefonoResponse" inputName="setTelefonoRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ee040292-28c3-4dbc-afb8-e5b54fb9065a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8082/ExpoSOAP/services/Usuario</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.proyecto.anzen.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:setTelefono>\r
+         <ws:telefono>?</ws:telefono>\r
+      </ws:setTelefono>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws.proyecto.anzen.com/Usuario/setTelefonoRequest"/></con:call></con:operation></con:interface><con:testSuite id="0752dd22-0068-435d-98fa-ccd0dc29206b" name="altaAlumno"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="1ed14dd7-c829-4045-a4be-12843f2024d4" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="altaAlumno" searchProperties="true"><con:settings/><con:testStep type="request" id="f60bb5a5-78f2-44d7-8acf-2163dc76b1a2" name="altaAlumno - Request 1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>UsuarioSoapBinding</con:interface><con:operation>altaAlumno</con:operation><con:request name="altaAlumno - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="7fe639b6-127e-47d8-a849-4250d67259b3"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8082/ExpoSOAP/services/Usuario</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.proyecto.anzen.com">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:altaAlumno>\r
+         <ws:nombre>Abner</ws:nombre>\r
+         <ws:telefono>12345</ws:telefono>\r
+      </ws:altaAlumno>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="03fcc77a-f937-42eb-a855-05268eca8265" name="SOAP Response"/><con:assertion type="Response SLA Assertion" id="38acc554-d711-4dab-ae0b-82871ab8c916" name="Response SLA"><con:configuration><SLA>500</SLA></con:configuration></con:assertion><con:assertion type="Simple Contains" id="333892f6-4d23-4a7b-ac74-4308d5e63605" name="Contains"><con:configuration><token>Abner</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws.proyecto.anzen.com/Usuario/altaAlumnoRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/><con:securityTest id="de4208c9-1b82-4fc0-845b-45957e1023da" name="Test" failOnError="true"><con:settings/><con:properties/></con:securityTest></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>request</con:name><con:value>abner</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
